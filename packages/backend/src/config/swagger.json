@@ -1,0 +1,134 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0.0"
+	},
+	"host": "localhost:3000",
+	"basePath": "/api/v1",
+	"schemes": ["http"],
+	"produces": ["application/json"],
+	"paths": {
+		"/auth/login": {
+			"get": {
+				"tags": ["Authentication"],
+				"summary": "Login with your XenForo Account and receive a id_token, access_token, as well as the auth contents",
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"429": {
+						"description": "Too Many Requests"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				},
+				"content": {
+					"application/json": {}
+				},
+				"parameters": [
+					{
+						"name": "user",
+						"in": "query",
+						"description": "Specifies the user string",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "pass",
+						"in": "query",
+						"description": "Specifies the password string",
+						"required": true,
+						"type": "string"
+					}
+				]
+			}
+		},
+		"/auth/retrieveUser": {
+			"get": {
+				"tags": ["Authentication"],
+				"summary": "Retrieve user data depending on the userId, as well as a new id_token (if needed) and a new access_token (if needed)",
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"content": {
+					"application/json": {}
+				},
+				"parameters": [
+					{
+						"name": "access_token",
+						"in": "header",
+						"description": "Specifies the access_token string",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "id_token",
+						"in": "header",
+						"description": "Specifies the id_token string",
+						"required": false,
+						"type": "string"
+					}
+				]
+			}
+		},
+		"/profile/redeem": {
+			"get": {
+				"tags": ["User Profile"],
+				"summary": "Gets or sets the possible login rewards",
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"400": {
+						"description": "Bad Request"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"500": {
+						"description": "Internal Server Error"
+					}
+				},
+				"content": {
+					"application/json": {}
+				},
+				"parameters": [
+					{
+						"name": "access_token",
+						"in": "header",
+						"description": "Specifies the access_token string",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "id_token",
+						"in": "header",
+						"description": "Specifies the id_token string",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "method",
+						"in": "query",
+						"description": "Specifies the method",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "update",
+						"in": "query",
+						"description": "Specifies what to update",
+						"required": false,
+						"type": "string"
+					}
+				]
+			}
+		}
+	}
+}

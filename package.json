@@ -1,0 +1,15 @@
+{
+	"name": "dashboard",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "concurrently -n frontend,backend \"cd ./packages/frontend && npm run serve\" \"cd ./packages/backend && npm run dev\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^5.0.2"
+	}
+}

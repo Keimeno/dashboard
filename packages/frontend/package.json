@@ -1,0 +1,143 @@
+{
+	"name": "dashboard-spa",
+	"version": "0.2.4",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve --open",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint",
+		"test:unit": "vue-cli-service test:unit",
+		"eslint-check": "eslint --print-config src/main.ts | eslint-config-prettier-check"
+	},
+	"dependencies": {
+		"@types/jsonwebtoken": "^8.3.5",
+		"axios": "^0.19.0",
+		"core-js": "^2.6.5",
+		"jsonwebtoken": "^8.5.1",
+		"particle.js": "^1.0.7",
+		"validator": "^11.1.0",
+		"vue": "^2.6.10",
+		"vue-chartist": "^2.2.1",
+		"vue-class-component": "^7.0.2",
+		"vue-i18n": "^8.14.1",
+		"vue-property-decorator": "^8.1.0",
+		"vue-router": "^3.0.3",
+		"vuetify": "^2.1.1",
+		"vuex": "^3.0.1"
+	},
+	"devDependencies": {
+		"@types/jest": "^23.1.4",
+		"@types/validator": "^10.11.3",
+		"@vue/cli-plugin-babel": "^3.11.0",
+		"@vue/cli-plugin-eslint": "^3.11.0",
+		"@vue/cli-plugin-typescript": "^3.11.0",
+		"@vue/cli-plugin-unit-jest": "^3.11.0",
+		"@vue/cli-service": "^3.11.0",
+		"@vue/eslint-config-prettier": "^5.0.0",
+		"@vue/eslint-config-typescript": "^4.0.0",
+		"@vue/test-utils": "1.0.0-beta.29",
+		"babel-core": "7.0.0-bridge.0",
+		"babel-eslint": "^10.0.1",
+		"eslint": "^5.16.0",
+		"eslint-config-prettier": "^6.3.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"eslint-plugin-vue": "^5.0.0",
+		"node-sass": "^4.9.0",
+		"prettier": "^1.18.2",
+		"sass": "^1.17.4",
+		"sass-loader": "^7.1.0",
+		"ts-jest": "^23.0.0",
+		"typescript": "3.4.3",
+		"vue-cli-plugin-vuetify": "^0.6.3",
+		"vue-template-compiler": "^2.6.10",
+		"vuetify-loader": "^1.2.2"
+	},
+	"resolutions": {
+		"eslint-loader": "2.1.2"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"node": true
+		},
+		"extends": [
+			"plugin:vue/essential",
+			"@vue/prettier",
+			"@vue/typescript",
+			"prettier",
+			"prettier/@typescript-eslint",
+			"prettier/babel",
+			"prettier/vue"
+		],
+		"rules": {
+			"no-whitespace-before-property": "off",
+			"quotes": [
+				2,
+				"single",
+				{
+					"avoidEscape": true
+				}
+			],
+			"no-mixed-spaces-and-tabs": "off"
+		},
+		"parserOptions": {
+			"parser": "@typescript-eslint/parser"
+		},
+		"overrides": [
+			{
+				"files": [
+					"**/__tests__/*.{j,t}s?(x)"
+				],
+				"env": {
+					"jest": true
+				}
+			}
+		]
+	},
+	"postcss": {
+		"plugins": {
+			"autoprefixer": {}
+		}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	],
+	"jest": {
+		"moduleFileExtensions": [
+			"js",
+			"jsx",
+			"json",
+			"vue",
+			"ts",
+			"tsx"
+		],
+		"transform": {
+			"^.+\\.vue$": "vue-jest",
+			".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"transformIgnorePatterns": [
+			"/node_modules/"
+		],
+		"moduleNameMapper": {
+			"^@/(.*)$": "<rootDir>/src/$1"
+		},
+		"snapshotSerializers": [
+			"jest-serializer-vue"
+		],
+		"testMatch": [
+			"**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+		],
+		"testURL": "http://localhost/",
+		"watchPlugins": [
+			"jest-watch-typeahead/filename",
+			"jest-watch-typeahead/testname"
+		],
+		"globals": {
+			"ts-jest": {
+				"babelConfig": true
+			}
+		}
+	}
+}
