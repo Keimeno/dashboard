@@ -65,15 +65,12 @@
             <v-col cols="12" md="4">
                 <material-card class="v-card-profile">
                     <v-avatar slot="offset" class="mx-auto d-block elevation-6" size="130">
-                        <img
-                            src="https://forum.dashboard.net/data/avatars/l/23/23003.jpg?1562265720"
-                            style="background-color: white;"
-                        />
+                        <img src="//unsplash.it/200/200" style="background-color: white;" />
                     </v-avatar>
                     <v-card-text class="text-center">
-                        <h6 class="overline mb-1">DEVELOPER</h6>
+                        <h6 class="overline mb-1">1</h6>
 
-                        <h2 class="font-weight-light mb-3">Keimeno</h2>
+                        <h2 class="font-weight-light mb-3">1</h2>
 
                         <p
                             class="font-weight-light"

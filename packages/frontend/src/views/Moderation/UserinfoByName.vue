@@ -43,12 +43,12 @@ import Vue from 'vue'
 export default Vue.extend({
 	data: () => ({
 		userinfo: {
-			name: 'Keimeno',
-			uuid: '6ee9150c-b99c-4d7f-9980-eb05c0c603e1',
-			group: 'Developer',
-			status: 'Playing',
-			currentServer: 'lobby6',
-			userId: '23003',
+			name: '1',
+			uuid: '1',
+			group: '1',
+			status: '1',
+			currentServer: '1',
+			userId: '1',
 			isForumBanned: false,
 		},
 	}),

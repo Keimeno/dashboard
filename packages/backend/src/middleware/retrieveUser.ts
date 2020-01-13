@@ -45,14 +45,14 @@ export default async (accessToken: any, idToken?: any): Promise<object> => {
 
 	// REMOVE LATER
 	data = {
-		id: 23003,
-		isAuthorized: true,
-		isStaff: true,
-		registerDate: 153438324324,
-		minecraftUUID: '6ee9150c-b99c-4d7f-9980-eb05c0c603e1',
-		minecraftName: 'Keimeno',
-		globalGroupName: 'Developer',
-		globalGroupPriority: '3',
+		id: 1,
+		isAuthorized: 1,
+		isStaff: 1,
+		registerDate: 1,
+		minecraftUUID: '1',
+		minecraftName: '1',
+		globalGroupName: '1',
+		globalGroupPriority: '1',
 		hasMinecraftLink: true
 	};
 
